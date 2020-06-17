@@ -1,0 +1,13 @@
+<fa-icon [icon]="faSignOutAlt" class="logout float-right" (click)="logout()"></fa-icon>
+<div class="row">
+    <div class="col-md-6" id="left">
+        <app-task-list [tasks] = "tasks" [sortedData] = "tasks" [sprints] = "sprints" (selectTask)="selectTask($event)" (createNewTask)="createNewTask()" (editedTask)="editTask($event)"
+        (deletedTask)="deletedTask($event)"></app-task-list>
+
+    </div>
+    <div class="col-md-6 my-auto">
+        <app-task-details *ngIf="selectedTask" [task]="this.selectedTask"></app-task-details>
+        <app-task-form  *ngIf="editedTask" [task]="this.editedTask" [tasksim]="this.editedTask" [users]="users" [sprints]="sprints" [tags]="tags" (taskCreated)="taskCreated($event)"
+        (taskUpdated)="taskUpdated($event)"></app-task-form>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+.appview {
+    background-color: whitesmoke;
+    color: dimgray;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+    font-family: sans-serif;
+}
+
+.customicon{
+    font-size: 0.9em;
+    margin: 0px 30px;
+}
